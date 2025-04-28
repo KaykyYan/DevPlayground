@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DevPlayground</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="auth-container">
+        <div class="auth-card">
+            <a href="/" class="logo">DevPlayground</a>
+            <h1>Bem-vindo de volta!</h1>
+            <p class="subtitulo">Entre na sua conta para continuar</p>
+
+            <form class="formulario" id="loginForm">
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <div class="campo-opcoes">
+                    <label class="checkbox">
+                        <input type="checkbox" name="lembrar">
+                        <span>Lembrar de mim</span>
+                    </label>
+                    <a href="#" class="link">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="botao-primario w-100">Entrar</button>
+            </form>
+
+            <p class="texto-cadastro">
+                Ainda não tem uma conta? <a href="/cadastro.html" class="link">Cadastre-se</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

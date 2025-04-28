@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPlayground - Comunidade de Desenvolvedores de Jogos</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <a href="/" class="logo">DevPlayground</a>
+            <nav class="navegacao">
+                <button class="botao-menu" aria-label="Abrir Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="/" class="ativo">Início</a></li>
+                    <li><a href="/unity.html">Unity</a></li>
+                    <li><a href="/unreal.html">Unreal</a></li>
+                    <li><a href="/chat.html">Chat</a></li>
+                    <li><a href="/perfil.html">Perfil</a></li>
+                </ul>
+            </nav>
+            <div class="acoes">
+                <a href="/login.html" class="botao-secundario">Entrar</a>
+                <a href="/cadastro.html" class="botao-primario">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <div class="container">
+            <section class="feed">
+                <div class="abas">
+                    <button class="aba ativo" data-feed="todos">Para Você</button>
+                    <button class="aba" data-feed="seguindo">Seguindo</button>
+                </div>
+
+                <div class="filtros">
+                    <button class="filtro ativo">Todos</button>
+                    <button class="filtro">Unity</button>
+                    <button class="filtro">Unreal</button>
+                    <button class="filtro">Protótipos</button>
+                    <button class="filtro">Finalizados</button>
+                </div>
+
+                <div class="lista-posts">
+                    <!-- Posts serão inseridos via JavaScript -->
+                </div>
+            </section>
+
+            <aside class="barra-lateral">
+                <div class="card-perfil">
+                    <div class="perfil-info">
+                        <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto de perfil" class="avatar">
+                        <div>
+                            <h3 class="nome">João Silva</h3>
+                            <p class="cargo">Desenvolvedor Unity</p>
+                        </div>
+                    </div>
+                    <div class="estatisticas">
+                        <div class="stat">
+                            <strong>28</strong>
+                            <span>Projetos</span>
+                        </div>
+                        <div class="stat">
+                            <strong>1.2k</strong>
+                            <span>Seguidores</span>
+                        </div>
+                        <div class="stat">
+                            <strong>450</strong>
+                            <span>Seguindo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-tendencias">
+                    <h3>Trending 🔥</h3>
+                    <ul class="lista-tendencias">
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#GameDev</span>
+                                <span class="posts">2.4k posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#Unity3D</span>
+                                <span class="posts">1.8k posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#UnrealEngine5</span>
+                                <span class="posts">956 posts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
