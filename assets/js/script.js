@@ -114,7 +114,7 @@ registerForm.addEventListener('submit', (e) => {
     localStorage.setItem('currentUser', JSON.stringify(userData));
 
     alert('Cadastro realizado com sucesso!');
-    window.location.href = '/DevPlayground-main/index.html';
+    window.location.href = 'index.html';
     }
 });
 }
@@ -157,7 +157,7 @@ loginForm.addEventListener('submit', (e) => {
         localStorage.removeItem('rememberedEmail');
         }
 
-        window.location.href = '/DevPlayground-main/logout.html';
+        window.location.href = 'logout.html';
     } else {
         alert('Email ou senha incorretos');
     }
