@@ -157,7 +157,7 @@ loginForm.addEventListener('submit', (e) => {
         localStorage.removeItem('rememberedEmail');
         }
 
-        window.location.href = '/logout.html';
+        window.location.href = 'logout.html';
     } else {
         alert('Email ou senha incorretos');
     }
