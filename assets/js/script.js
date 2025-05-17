@@ -114,7 +114,7 @@ registerForm.addEventListener('submit', (e) => {
     localStorage.setItem('currentUser', JSON.stringify(userData));
 
     alert('Cadastro realizado com sucesso!');
-    window.location.href = '/index.html';
+    window.location.href = 'index.html';
     }
 });
 }
