@@ -171,3 +171,13 @@ if (rememberedEmail) {
     document.querySelector('input[name="lembrar"]').checked = true;
 }
 }  
+
+// Função para sair do sistema
+const botaoSair = document.getElementById('botaoSair');
+if (botaoSair) {
+  botaoSair.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    localStorage.removeItem('currentUser'); 
+    window.location.href = 'index.html';
+  });
+}
