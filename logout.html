@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevPlayground - Comunidade de Desenvolvedores de Jogos</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Dashboard - Fórum GameDev</title>
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
                     <span class="hamburger"></span>
                 </button>
                 <ul class="menu">
-                    <li><a href="/" class="ativo">Início</a></li>
+                    <li><a href="/dashboard.html" class="ativo">Início</a></li>
                     <li><a href="/unity.html">Unity</a></li>
                     <li><a href="/unreal.html">Unreal</a></li>
                     <li><a href="/chat.html">Chat</a></li>
@@ -26,8 +26,7 @@
                 </ul>
             </nav>
             <div class="acoes">
-                <a href="/DevPlayground-main/index.html" class="botao-secundario">Sair</a>
-                <a href="/DevPlayground-main/cadastro.html" class="botao-primario">Cadastrar</a>
+                <a href="/" id="botaoSair" class="botao-secundario">Sair</a>
             </div>
         </div>
     </header>
@@ -58,7 +57,7 @@
                     <div class="perfil-info">
                         <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto de perfil" class="avatar">
                         <div>
-                            <h3 class="nome">João Silva</h3>
+                            <h3 class="nome" id="nomeUsuario">Carregando...</h3>
                             <p class="cargo">Desenvolvedor Unity</p>
                         </div>
                     </div>
@@ -105,6 +104,6 @@
         </div>
     </main>
 
-    <script src="assets/js/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
