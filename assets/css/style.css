@@ -510,13 +510,6 @@ bottom: 0;
 .acoes {
 display: none;
 }
-
-.card-perfil .acoes-perfil {
-margin-top: 1rem;
-display: flex;
-flex-direction: column;
-gap: 0.75rem;
-}
 @media (max-width: 480px) {
 .hero h1 {
 font-size: 2rem;
