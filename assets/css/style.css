@@ -13,7 +13,7 @@
     --raio-borda: 0.5rem;
 }
 
-/* Reset básico - CORRIGIDO */
+/* Reset básico -
 * { /* Adicionado o seletor universal "*" */
     margin: 0;
     padding: 0;
@@ -134,7 +134,7 @@ body {
 
 /* Seção principal */
 .hero {
-    padding: 8rem 0 4rem; /* Aumentado o padding-top para compensar header fixo */
+    padding: 8rem 0 4rem; 
     background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
     text-align: center;
@@ -413,17 +413,10 @@ body {
     width: 100%;
 }
 
-/* Responsividade Geral (antes dos estilos específicos da Dashboard) */
+/* Responsividade Geral (antes dos estilos específicos da tela logout) */
+
 @media (max-width: 1024px) {
-    /* A REGRA .principal .container FOI MOVIDA PARA A SEÇÃO DA DASHBOARD
-        PARA MELHOR ORGANIZAÇÃO E ESPECIFICIDADE.
-        A REGRA ANTERIOR PARA .barra-lateral { display: none; } FOI MANTIDA AQUI
-        CASO SEJA USADA EM OUTRAS PÁGINAS. PARA A DASHBOARD, SERÁ SOBRESCRITA.
-    */
-    .barra-lateral { /* Regra geral para barra lateral em outras páginas, se houver */
-        /* display: none; -> Se esta linha for descomentada e necessária para outras páginas,
-                           a regra específica da dashboard abaixo irá sobrescrevê-la para a dashboard.
-                           Se não for usada em outras páginas, pode ser removida. */
+    .barra-lateral {
     }
 }
 
@@ -451,7 +444,7 @@ body {
     }
 
     .menu {
-        display: none; /* Menu principal escondido para dar lugar ao menu hamburger */
+        display: none; 
     }
 
     .menu.ativo { /* Estilo para o menu hamburger quando ativo */
@@ -460,7 +453,7 @@ body {
         background: var(--cor-fundo-card);
         padding: 1rem;
         position: absolute;
-        top: 100%; /* Logo abaixo do cabeçalho */
+        top: 100%; 
         left: 0;
         right: 0;
         box-shadow: var(--sombra-md);
@@ -541,22 +534,17 @@ body {
     }
 }
 
-/* --- Estilos específicos para a página de Dashboard (logout.html) --- */
-/* Limpeza de espaços não padrão foi feita aqui */
-
-.principal { /* Container principal da LOGOUT */
-    padding-top: 6rem; 
+.principal {
+    padding-top: 6rem;
     padding-bottom: 2rem;
 }
 
-/* Layout do container da dashboard com feed e barra lateral */
 .principal .container {
     display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 2rem; 
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
 }
 
-/* Estilização das Abas e Filtros no Feed */
 .feed .abas,
 .feed .filtros {
     margin-bottom: 1.5rem;
@@ -594,7 +582,6 @@ body {
     font-weight: 600;
 }
 
-/* Estilização base para os cards de post */
 .lista-posts .post-card {
     background-color: var(--cor-fundo-card);
     border: 1px solid var(--cor-borda);
@@ -611,13 +598,12 @@ body {
     transform: translateY(-3px);
 }
 
-/* ADICIONADO: Regra para conter imagens dentro dos posts */
 .lista-posts .post-card img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: calc(var(--raio-borda) / 2); 
-    margin-bottom: 1rem; 
+    border-radius: calc(var(--raio-borda) / 2);
+    margin-bottom: 1rem;
 }
 
 .lista-posts .post-card h4 {
@@ -638,8 +624,7 @@ body {
     color: #adb5bd;
 }
 
-/* Estilização da Barra Lateral e seus Cards */
-.principal .barra-lateral .card-perfil, 
+.principal .barra-lateral .card-perfil,
 .principal .barra-lateral .card-tendencias {
     background-color: var(--cor-fundo-card);
     border-radius: var(--raio-borda);
@@ -648,7 +633,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Card de Perfil */
 .principal .barra-lateral .card-perfil .perfil-info {
     display: flex;
     align-items: center;
@@ -698,7 +682,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Card de Tendências */
 .principal .barra-lateral .card-tendencias h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -744,27 +727,73 @@ body {
     color: #6c757d;
 }
 
-/* Ajustes para responsividade específica da dashboard */
+/* Estilos para Card de Configurações da Conta */
+.principal .barra-lateral .card-configuracoes-conta {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-sm);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.principal .barra-lateral .card-configuracoes-conta h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.principal .barra-lateral .secao-configuracao {
+    margin-bottom: 2rem;
+}
+
+.principal .barra-lateral .secao-configuracao:last-child {
+    margin-bottom: 0;
+}
+
+.principal .barra-lateral .secao-configuracao h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.principal .barra-lateral .card-configuracoes-conta .formulario .campo {
+    margin-bottom: 1rem;
+}
+
+.principal .barra-lateral .card-configuracoes-conta .formulario .campo label {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+}
+
+.principal .barra-lateral .card-configuracoes-conta .formulario .botao-primario {
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Media Queries Específicas da Dashboard */
 @media (max-width: 1024px) {
-    .principal .container { 
+    .principal .container {
         grid-template-columns: 1fr;
     }
-
-    .principal .barra-lateral { 
-        display: block; 
-        width: 100%;    
+    .principal .barra-lateral {
+        display: block;
+        width: 100%;
         margin-top: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    
-    .principal .feed .aba, 
+    .principal .feed .aba,
     .principal .feed .filtro {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
     }
-
     .principal .barra-lateral .card-perfil .perfil-info {
         flex-direction: column;
         text-align: center;
@@ -772,5 +801,14 @@ body {
     .principal .barra-lateral .card-perfil .avatar {
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+    .principal .barra-lateral .card-configuracoes-conta {
+        padding: 1rem;
+    }
+    .principal .barra-lateral .card-configuracoes-conta h3 {
+        font-size: 1.15rem;
+    }
+    .principal .barra-lateral .secao-configuracao h4 {
+        font-size: 1rem;
     }
 }
