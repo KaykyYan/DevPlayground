@@ -178,7 +178,57 @@ if (rememberedEmail) {
     document.getElementById('email').value = rememberedEmail;
     document.querySelector('input[name="lembrar"]').checked = true;
 }
-}  
+}
+
+ // Verifica se estamos na página logout.html 
+if (window.location.pathname.endsWith('logout.html')) {
+    const botaoMenuPerfil = document.getElementById('botaoMenuPerfil');
+    const dropdownPerfilConteudo = document.getElementById('dropdownPerfilConteudo');
+    const botaoSairDropdown = document.getElementById('botaoSairDropdown');
+    const nomeUsuarioElement = document.getElementById('nomeUsuario'); // Para exibir o nome do usuário
+
+    // Exibir nome do usuário logado
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (currentUser && nomeUsuarioElement) {
+        nomeUsuarioElement.textContent = currentUser.name;
+    } else if (!currentUser) {
+        // Se não há usuário logado, redireciona para o login
+        alert('Você precisa estar logado para acessar esta página.');
+        window.location.href = 'login.html';
+        return; // 
+    }
+
+
+    if (botaoMenuPerfil && dropdownPerfilConteudo) {
+        botaoMenuPerfil.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            dropdownPerfilConteudo.classList.toggle('ativo');
+            botaoMenuPerfil.classList.toggle('aberto'); 
+        });
+
+        // Fecha o dropdown se clicar fora dele
+        window.addEventListener('click', () => {
+            if (dropdownPerfilConteudo.classList.contains('ativo')) {
+                dropdownPerfilConteudo.classList.remove('ativo');
+                botaoMenuPerfil.classList.remove('aberto');
+            }
+        });
+
+        // Impede que cliques dentro do dropdown o fechem (se o dropdown for clicável)
+        dropdownPerfilConteudo.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    }
+
+    // Ação do botão Sair dentro do dropdown
+    if (botaoSairDropdown) {
+        botaoSairDropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            // localStorage.removeItem('rememberedEmail'); // Opcional: remover email lembrado ao sair
+            window.location.href = 'index.html'; // Ou 'login.html'
+        });
+    }
 
 // Função para sair do sistema
 const botaoSair = document.getElementById('botaoSair');
