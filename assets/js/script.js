@@ -98,7 +98,7 @@ if (registerForm) {
             const userData = {
                 name: nameInput.value,
                 email: emailInput.value,
-                password: passwordInput.value, // Lembre-se: NUNCA armazene senhas em texto plano em produção
+                password: passwordInput.value, 
                 createdAt: new Date().toISOString()
             };
             const users = JSON.parse(localStorage.getItem('users') || '[]');
@@ -152,10 +152,10 @@ if (loginForm) {
                 } else {
                     localStorage.removeItem('rememberedEmail');
                 }
-                window.location.href = 'logout.html'; // logout.html é a sua dashboard
+                window.location.href = 'logout.html'; // logout.html
             } else {
-                // Idealmente, mostrar erro no formulário em vez de alert
-                const loginFeedbackElement = document.getElementById('login-feedback'); // Crie este elemento no seu login.html se não existir
+                // mostrar erro no formulário em vez de alert
+                const loginFeedbackElement = document.getElementById('login-feedback'); 
                 if (loginFeedbackElement) {
                     loginFeedbackElement.textContent = 'Email ou senha incorretos.';
                     loginFeedbackElement.style.color = 'red';
@@ -169,7 +169,7 @@ if (loginForm) {
 
     // Preenche o email lembrado automaticamente no formulário de login
     const rememberedEmail = localStorage.getItem('rememberedEmail');
-    const emailFieldForLogin = loginForm.querySelector('#email'); // Garante que pegamos o campo de email do formulário de login
+    const emailFieldForLogin = loginForm.querySelector('#email'); 
     if (rememberedEmail && emailFieldForLogin) {
         emailFieldForLogin.value = rememberedEmail;
         const rememberMeCheckbox = loginForm.querySelector('input[name="lembrar"]');
@@ -179,7 +179,7 @@ if (loginForm) {
     }
 }
 
-// Lógica específica para a página logout.html (Dashboard)
+// Lógica específica para a página logout.html 
 if (window.location.pathname.endsWith('logout.html')) {
     const botaoMenuPerfil = document.getElementById('botaoMenuPerfil');
     const dropdownPerfilConteudo = document.getElementById('dropdownPerfilConteudo');
@@ -194,7 +194,7 @@ if (window.location.pathname.endsWith('logout.html')) {
     } else if (!currentUser) {
         alert('Você precisa estar logado para acessar esta página.');
         window.location.href = 'login.html';
-        return; // Interrompe a execução do script se não estiver logado
+        return; 
     }
 
     // Controle do dropdown de perfil
@@ -231,7 +231,7 @@ if (window.location.pathname.endsWith('logout.html')) {
     const linksAcaoPlaceholder = dropdownPerfilConteudo.querySelectorAll('a[data-action]');
     linksAcaoPlaceholder.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault(); // Impede a navegação para a âncora href="#"
+            event.preventDefault(); 
             const acao = this.getAttribute('data-action');
             
             // Esconde o dropdown
