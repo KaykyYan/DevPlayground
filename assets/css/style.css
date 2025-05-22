@@ -530,4 +530,221 @@ padding: 1rem;
 .auth-card {
 padding: 1.5rem;
 }
+.principal {
+    padding-top: 5rem; /* Ajuste este valor se o seu cabeçalho tiver altura diferente de 4rem */
+    padding-bottom: 2rem;
+}
+
+  /*Tela de login sucessido*/
+/* Layout do container da dashboard com feed e barra lateral */
+.principal .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem; 
+}
+
+/* Estilização das Abas e Filtros no Feed */
+.feed .abas,
+.feed .filtros {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 0.75rem; 
+}
+
+.feed .aba,
+.feed .filtro {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-secundario);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.feed .aba:hover,
+.feed .filtro:hover {
+    background-color: #f1f1f1; 
+    border-color: #cccccc;
+    box-shadow: var(--sombra-sm);
+}
+
+.feed .aba.ativo, 
+.feed .filtro.ativo {
+    background-color: var(--cor-primaria);
+    color: white;
+    border-color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+/* Estilização base para os cards de post (a serem inseridos via JS) */
+.lista-posts .post-card {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--sombra-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.lista-posts .post-card:hover {
+    box-shadow: var(--sombra-md);
+    transform: translateY(-3px); 
+}
+
+.lista-posts .post-card h4 { 
+    color: var(--cor-primaria);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.lista-posts .post-card p { 
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.lista-posts .post-meta { 
+    font-size: 0.85rem;
+    color: #adb5bd; 
+}
+
+/* Estilização da Barra Lateral e seus Cards */
+.barra-lateral .card-perfil,
+.barra-lateral .card-tendencias {
+    background-color: var(--cor-fundo-card);
+    border-radius: var(--raio-borda);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-sm);
+    margin-bottom: 2rem; /* Espaço entre os cards na sidebar */
+}
+
+/* Card de Perfil */
+.barra-lateral .card-perfil .perfil-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.barra-lateral .card-perfil .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-primaria-hover);
+    object-fit: cover;
+    margin-right: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.barra-lateral .card-perfil .nome {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 0.25rem;
+}
+
+.barra-lateral .card-perfil .cargo {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+}
+
+.barra-lateral .card-perfil .estatisticas {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 1rem;
+}
+
+.barra-lateral .card-perfil .stat strong {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.barra-lateral .card-perfil .stat span {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    text-transform: uppercase; 
+}
+
+/* Card de Tendências */
+.barra-lateral .card-tendencias h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--cor-texto);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--cor-borda); 
+}
+
+.barra-lateral .lista-tendencias {
+    list-style: none;
+    padding-left: 0;
+}
+
+.barra-lateral .lista-tendencias li {
+    margin-bottom: 0.5rem; /* Espaçamento menor entre itens de tendência */
+}
+
+.barra-lateral .tendencia {
+    display: block;
+    padding: 0.6rem 0.2rem; 
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    border-radius: calc(var(--raio-borda) / 2); 
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.barra-lateral .tendencia:hover {
+    color: var(--cor-primaria);
+    background-color: #f8f9fa; 
+}
+
+.barra-lateral .tendencia .tag {
+    font-weight: 500;
+    color: var(--cor-primaria); 
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.barra-lateral .tendencia .posts {
+    font-size: 0.8rem;
+    color: #6c757d; 
+}
+
+/* Ajustes para responsividade específica da dashboard se necessário */
+@media (max-width: 1024px) {
+    .principal .container {
+        grid-template-columns: 1fr; 
+    }
+
+    .barra-lateral {
+        margin-top: 2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .feed .aba,
+    .feed .filtro {
+        padding: 0.5rem 1rem; 
+        font-size: 0.85rem;
+    }
+
+    .barra-lateral .card-perfil .perfil-info {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .barra-lateral .card-perfil .avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }
