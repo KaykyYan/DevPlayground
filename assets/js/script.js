@@ -1,11 +1,3 @@
-// Controle do botão menu da tela de logout
-document.addEventListener('DOMContentLoaded', () => {
-    // Valida se o email está no formato correto
-    const validateEmail = (email) => {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-};
-
 // Valida se o email está no formato correto
 const validateEmail = (email) => {
 const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
