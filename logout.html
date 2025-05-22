@@ -26,7 +26,21 @@
                 </ul>
             </nav>
             <div class="acoes">
-                <a href="index.html" id="botaoSair" class="botao-secundario">Sair</a>
+                <div class="perfil-dropdown-container">
+                    <button type="button" class="botao-perfil" id="botaoMenuPerfil">
+                        Perfil
+                        <svg class="seta-dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu-perfil" id="dropdownPerfilConteudo">
+                        <a href="#config-alterar-nome" class="dropdown-item" data-action="mostrar-form-nome">Alterar Nome</a>
+                        <a href="#config-alterar-email" class="dropdown-item" data-action="mostrar-form-email">Alterar Email</a>
+                        <a href="#config-alterar-senha" class="dropdown-item" data-action="mostrar-form-senha">Alterar Senha</a>
+                        <div class="dropdown-divisor"></div>
+                        <a href="#" id="botaoSairDropdown" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -75,7 +89,7 @@
                             <span>Seguindo</span>
                         </div>
                     </div>
-                    </div>
+                </div>
 
                 <div class="card-tendencias">
                     <h3>Trending 🔥</h3>
@@ -99,55 +113,6 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-
-                <div class="card-configuracoes-conta">
-                    <h3>Configurações da Conta</h3>
-
-                    <div class="secao-configuracao" id="config-alterar-nome">
-                        <h4>Alterar Nome</h4>
-                        <form id="formAlterarNome" class="formulario">
-                            <div class="campo">
-                                <label for="novoNome">Novo nome de usuário</label>
-                                <input type="text" id="novoNome" name="novoNome" placeholder="Digite seu novo nome" required>
-                            </div>
-                            <button type="submit" class="botao-primario w-100">Salvar Nome</button>
-                        </form>
-                    </div>
-
-                    <div class="secao-configuracao" id="config-alterar-email">
-                        <h4>Alterar Email</h4>
-                        <form id="formAlterarEmail" class="formulario">
-                            <div class="campo">
-                                <label for="novoEmail">Novo email</label>
-                                <input type="email" id="novoEmail" name="novoEmail" placeholder="seuemail@novo.com" required>
-                            </div>
-                            <div class="campo">
-                                <label for="senhaParaEmail">Senha atual (para confirmar)</label>
-                                <input type="password" id="senhaParaEmail" name="senhaParaEmail" placeholder="Sua senha atual" required>
-                            </div>
-                            <button type="submit" class="botao-primario w-100">Salvar Email</button>
-                        </form>
-                    </div>
-
-                    <div class="secao-configuracao" id="config-alterar-senha">
-                        <h4>Alterar Senha</h4>
-                        <form id="formAlterarSenha" class="formulario">
-                            <div class="campo">
-                                <label for="senhaAtual">Senha atual</label>
-                                <input type="password" id="senhaAtual" name="senhaAtual" placeholder="Sua senha atual" required>
-                            </div>
-                            <div class="campo">
-                                <label for="novaSenha">Nova senha</label>
-                                <input type="password" id="novaSenha" name="novaSenha" placeholder="Mínimo 6 caracteres" required>
-                            </div>
-                            <div class="campo">
-                                <label for="confirmarNovaSenha">Confirmar nova senha</label>
-                                <input type="password" id="confirmarNovaSenha" name="confirmarNovaSenha" placeholder="Confirme a nova senha" required>
-                            </div>
-                            <button type="submit" class="botao-primario w-100">Salvar Senha</button>
-                        </form>
-                    </div>
                 </div>
             </aside>
         </div>
