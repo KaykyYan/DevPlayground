@@ -3,53 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - DevPlayground</title>
+    <title>Dashboard - Fórum GameDev</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="auth-container">
-        <div class="auth-card">
-            <a href="/" class="logo">Fórum GameDev</a>
-            <h1>Crie sua conta</h1>
-            <p class="subtitulo">Junte-se à comunidade de desenvolvedores de jogos</p>
+    <header class="cabecalho">
+        <div class="cabecalho-container">
+            <a href="index.html" class="logo">Fórum GameDev</a>
+            <nav class="navegacao">
+                <button class="botao-menu" aria-label="Abrir Menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="" class="ativo">Início</a></li>
+                    <li><a href="">Unity</a></li>
+                    <li><a href="">Unreal</a></li>
+                    <li><a href="">Chat</a></li>
+                    <li><a href="">Perfil</a></li>
+                </ul>
+            </nav>
+            <div class="acoes">
+                <div class="perfil-dropdown-container">
+                    <button type="button" class="botao-perfil" id="botaoMenuPerfil">
+                        Perfil
+                        <svg class="seta-dropdown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 011.06 0L10 11.94l3.72-3.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.22 9.28a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu-perfil" id="dropdownPerfilConteudo">
+                        <a href="#config-alterar-nome" class="dropdown-item" data-action="mostrar-form-nome">Alterar Nome</a>
+                        <a href="#config-alterar-email" class="dropdown-item" data-action="mostrar-form-email">Alterar Email</a>
+                        <a href="#config-alterar-senha" class="dropdown-item" data-action="mostrar-form-senha">Alterar Senha</a>
+                        <div class="dropdown-divisor"></div>
+                        <a href="#" id="botaoSairDropdown" class="dropdown-item">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <form class="formulario" id="cadastroForm">
-                <div class="campo">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" required>
+    <main class="principal">
+        <div class="container">
+            <section class="feed">
+                <div class="abas">
+                    <button class="aba ativo" data-feed="todos">Para Você</button>
+                    <button class="aba" data-feed="seguindo">Seguindo</button>
                 </div>
 
-                <div class="campo">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="campo">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" required>
+                <div class="filtros">
+                    <button class="filtro ativo">Todos</button>
+                    <button class="filtro">Unity</button>
+                    <button class="filtro">Unreal</button>
+                    <button class="filtro">Protótipos</button>
+                    <button class="filtro">Finalizados</button>
                 </div>
 
-                <div class="campo">
-                    <label for="confirmarSenha">Confirmar senha</label>
-                    <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                <div class="lista-posts">
+                    <!-- Posts serão inseridos via JavaScript -->
+                </div>
+            </section>
+
+            <aside class="barra-lateral">
+                <div class="card-perfil">
+                    <div class="perfil-info">
+                        <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Foto de perfil" class="avatar">
+                        <div>
+                            <h3 class="nome" id="nomeUsuario">Carregando...</h3>
+                            <p class="cargo">Desenvolvedor Unity</p>
+                        </div>
+                    </div>
+                    <div class="estatisticas">
+                        <div class="stat">
+                            <strong>28</strong>
+                            <span>Projetos</span>
+                        </div>
+                        <div class="stat">
+                            <strong>1.2k</strong>
+                            <span>Seguidores</span>
+                        </div>
+                        <div class="stat">
+                            <strong>450</strong>
+                            <span>Seguindo</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="campo-opcoes">
-                    <label class="checkbox">
-                        <input type="checkbox" name="termos" required>
-                        <span>Eu aceito os <a href="#" class="link">termos de uso</a> e a <a href="#" class="link">política de privacidade</a></span>
-                    </label>
+                <div class="card-tendencias">
+                    <h3>Trending 🔥</h3>
+                    <ul class="lista-tendencias">
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#GameDev</span>
+                                <span class="posts">2.4k posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#Unity3D</span>
+                                <span class="posts">1.8k posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tendencia">
+                                <span class="tag">#UnrealEngine5</span>
+                                <span class="posts">956 posts</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-
-                <button type="submit" class="botao-primario w-100">Criar conta</button>
-            </form>
-
-            <p class="texto-cadastro">
-                Já tem uma conta? <a href="login.html" class="link">Faça login</a>
-            </p>
+            </aside>
         </div>
     </main>
 
