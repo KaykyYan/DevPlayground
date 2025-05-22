@@ -15,7 +15,11 @@
 
 /* Reset básico */
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Estilo base */
 body {
 font-family: 'Poppins', sans-serif;
