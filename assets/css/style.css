@@ -1,16 +1,16 @@
 /* Paleta de cores, bordas e sombras */
 :root {
-    --cor-primaria: #6366f1;
-    --cor-primaria-hover: #4f46e5;
-    --cor-secundaria: #14b8a6;
-    --cor-fundo: #f8fafc;
-    --cor-fundo-card: #ffffff;
-    --cor-borda: #e2e8f0;
-    --cor-texto: #1e293b;
-    --cor-texto-secundario: #64748b;
-    --sombra-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --sombra-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --raio-borda: 0.5rem;
+--cor-primaria: #6366f1;
+--cor-primaria-hover: #4f46e5;
+--cor-secundaria: #14b8a6;
+--cor-fundo: #f8fafc;
+--cor-fundo-card: #ffffff;
+--cor-borda: #e2e8f0;
+--cor-texto: #1e293b;
+--cor-texto-secundario: #64748b;
+--sombra-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+--sombra-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+--raio-borda: 0.5rem;
 }
 
 /* Reset básico */
@@ -19,555 +19,540 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Estilo base */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.5;
+font-family: 'Poppins', sans-serif;
+background-color: var(--cor-fundo);
+color: var(--cor-texto);
+line-height: 1.5;
 }
 
 /* Container central */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1rem;
 }
 
 /* Cabeçalho fixo */
 .cabecalho {
-    background: var(--cor-fundo-card);
-    border-bottom: 1px solid var(--cor-borda);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+background: var(--cor-fundo-card);
+border-bottom: 1px solid var(--cor-borda);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 100;
 }
 
+/* Layout do cabeçalho */
 .cabecalho-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;
-    padding: 0 1.5rem;
-    max-width: 1200px;
-    margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 4rem;
+padding: 0 1.5rem;
+max-width: 1200px;
+margin: auto;
 }
 
+/* Logo */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-primaria);
-    text-decoration: none;
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--cor-primaria);
+text-decoration: none;
 }
 
+/* Navegação */
 .navegacao {
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 
 .menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+display: flex;
+list-style: none;
+gap: 2rem;
 }
 
 .menu a {
-    color: var(--cor-texto);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+color: var(--cor-texto);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s;
 }
 
 .menu a:hover,
 .menu a.ativo {
-    color: var(--cor-primaria);
+color: var(--cor-primaria);
 }
 
 .botao-menu {
-    display: none;
+display: none;
 }
 
 /* Botões padrão */
 .botao-primario,
 .botao-secundario {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    border-radius: var(--raio-borda);
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s;
-    font-family: inherit; /* Garante herança da fonte */
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 0.5rem 1rem;
+border-radius: var(--raio-borda);
+font-weight: 500;
+text-decoration: none;
+transition: all 0.2s;
 }
 
+/* Botão principal */
 .botao-primario {
-    background: var(--cor-primaria);
-    color: white;
+background: var(--cor-primaria);
+color: white;
 }
 
 .botao-primario:hover {
-    background: var(--cor-primaria-hover);
+background: var(--cor-primaria-hover);
 }
 
+/* Botão secundário */
 .botao-secundario {
-    background: transparent;
-    border: 1px solid var(--cor-borda);
-    color: var(--cor-texto);
+background: transparent;
+border: 1px solid var(--cor-borda);
+color: var(--cor-texto);
 }
 
 .botao-secundario:hover {
-    background: var(--cor-fundo);
+background: var(--cor-fundo);
 }
 
 .acoes {
-    display: flex;
-    gap: 1rem;
+display: flex;
+gap: 1rem;
 }
 
-/* Estilos para o Dropdown de Perfil no Cabeçalho */
-.acoes .perfil-dropdown-container {
-    position: relative;
-    display: inline-block;
-}
-
-.acoes .botao-perfil {
-    background: var(--cor-primaria);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: var(--raio-borda);
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: inherit; /* Garante herança da fonte */
-}
-
-.acoes .botao-perfil:hover {
-    background: var(--cor-primaria-hover);
-}
-
-.acoes .botao-perfil .seta-dropdown {
-    transition: transform 0.2s ease-in-out;
-    fill: currentColor;
-}
-
-.acoes .botao-perfil.aberto .seta-dropdown {
-    transform: rotate(180deg);
-}
-
-.acoes .dropdown-menu-perfil {
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    background-color: var(--cor-fundo-card);
-    min-width: 220px;
-    box-shadow: var(--sombra-md);
-    border-radius: var(--raio-borda);
-    border: 1px solid var(--cor-borda);
-    z-index: 110;
-    padding: 0.5rem 0;
-    font-family: inherit; /* Garante herança da fonte para o container */
-}
-
-.acoes .dropdown-menu-perfil.ativo {
-    display: block;
-}
-
-.acoes .dropdown-menu-perfil .dropdown-item {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: var(--cor-texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    font-family: inherit; /* Garante herança da fonte para os itens */
-}
-
-.acoes .dropdown-menu-perfil .dropdown-item:hover {
-    background-color: var(--cor-fundo);
-    color: var(--cor-primaria);
-}
-
-.acoes .dropdown-menu-perfil .dropdown-divisor {
-    height: 1px;
-    background-color: var(--cor-borda);
-    margin: 0.5rem 0;
-}
-
-/* Seção principal Hero */
+/* Seção principal */
 .hero {
-    padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
-    color: white;
-    text-align: center;
+padding: 8rem 0 4rem;
+background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+color: white;
+text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+font-size: 3rem;
+margin-bottom: 1.5rem;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+font-size: 1.25rem;
+margin-bottom: 2rem;
+opacity: 0.9;
 }
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+display: flex;
+justify-content: center;
+gap: 1rem;
 }
 
-/* Seções genéricas de conteúdo */
-.sobre,
-.recursos {
-    padding: 6rem 0;
-    background: var(--cor-fundo);
+/* Seção Sobre */
+.sobre {
+padding: 6rem 0;
+background: var(--cor-fundo);
 }
 
-.missao,
-.contato {
-    padding: 6rem 0;
-    background: var(--cor-fundo-card);
+.sobre h2 {
+text-align: center;
+margin-bottom: 3rem;
+font-size: 2.5rem;
 }
 
-.sobre h2,
-.missao h2,
-.recursos h2,
-.contato h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
+.sobre-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
 }
 
-.sobre-grid,
-.recursos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.sobre-card {
+background: var(--cor-fundo-card);
+padding: 2rem;
+border-radius: var(--raio-borda);
+box-shadow: var(--sombra-sm);
 }
 
-.sobre-card,
-.recurso-card {
-    background: var(--cor-fundo-card);
-    padding: 2rem;
-    border-radius: var(--raio-borda);
-    box-shadow: var(--sombra-sm);
+.sobre-card h3 {
+margin-bottom: 1rem;
+color: var(--cor-primaria);
 }
 
-.sobre-card h3,
-.recurso-card h3 {
-    margin-bottom: 1rem;
-    color: var(--cor-primaria);
+/* Seção Missão */
+.missao {
+padding: 6rem 0;
+background: var(--cor-fundo-card);
 }
 
 .missao-content {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+max-width: 800px;
+margin: auto;
+text-align: center;
+}
+
+.missao h2 {
+margin-bottom: 2rem;
+font-size: 2.5rem;
 }
 
 .missao p {
-    font-size: 1.25rem;
-    color: var(--cor-texto-secundario);
-    line-height: 1.8;
+font-size: 1.25rem;
+color: var(--cor-texto-secundario);
+line-height: 1.8;
+}
+
+/* Seção Recursos */
+.recursos {
+padding: 6rem 0;
+background: var(--cor-fundo);
+}
+
+.recursos h2 {
+text-align: center;
+margin-bottom: 3rem;
+font-size: 2.5rem;
+}
+
+.recursos-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+
+.recurso-card {
+background: var(--cor-fundo-card);
+padding: 2rem;
+border-radius: var(--raio-borda);
+box-shadow: var(--sombra-sm);
+}
+
+.recurso-card h3 {
+margin-bottom: 1rem;
+color: var(--cor-primaria);
+}
+
+/* Seção Contato */
+.contato {
+padding: 6rem 0;
+background: var(--cor-fundo-card);
+}
+
+.contato h2 {
+text-align: center;
+margin-bottom: 3rem;
+font-size: 2.5rem;
 }
 
 .contato-container {
-    max-width: 600px;
-    margin: auto;
+max-width: 600px;
+margin: auto;
 }
 
 .formulario-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
 }
 
-/* Campos de formulário genéricos */
+/* Campos do formulário */
 .campo {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
 }
 
 .campo label {
-    font-size: 0.875rem;
-    font-weight: 500;
+font-size: 0.875rem;
+font-weight: 500;
 }
 
 .campo input {
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    font-size: 1rem;
-    transition: all 0.2s;
-    font-family: inherit; /* Garante herança da fonte */
+padding: 0.75rem 1rem;
+border: 1px solid var(--cor-borda);
+border-radius: var(--raio-borda);
+font-size: 1rem;
+transition: all 0.2s;
 }
 
 .campo input:focus {
-    border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-    outline: none;
+border-color: var(--cor-primaria);
+box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+outline: none;
 }
 
 .formulario-contato textarea {
-    min-height: 150px;
-    resize: vertical;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    font-family: inherit; /* Garante herança da fonte */
+min-height: 150px;
+resize: vertical;
+padding: 0.75rem 1rem;
+border: 1px solid var(--cor-borda);
+border-radius: var(--raio-borda);
+font-family: inherit;
 }
 
 /* Rodapé */
 .rodape {
-    background: var(--cor-texto);
-    color: white;
-    padding: 4rem 0 2rem;
+background: var(--cor-texto);
+color: white;
+padding: 4rem 0 2rem;
 }
 
 .rodape-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    margin-bottom: 2rem;
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 4rem;
+margin-bottom: 2rem;
 }
 
 .rodape-logo p {
-    margin-top: 1rem;
-    opacity: 0.8;
+margin-top: 1rem;
+opacity: 0.8;
 }
 
 .rodape-links h4 {
-    margin-bottom: 1rem;
+margin-bottom: 1rem;
 }
 
 .rodape-links ul {
-    list-style: none;
+list-style: none;
 }
 
 .rodape-links a {
-    color: white;
-    text-decoration: none;
-    opacity: 0.8;
-    display: block;
-    padding: 0.5rem 0;
+color: white;
+text-decoration: none;
+opacity: 0.8;
+display: block;
+padding: 0.5rem 0;
 }
 
 .rodape-links a:hover {
-    opacity: 1;
+opacity: 1;
 }
 
 .rodape-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
-    text-align: center;
-    opacity: 0.8;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+padding-top: 2rem;
+text-align: center;
+opacity: 0.8;
 }
 
 /* Login e Cadastro */
 .auth-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 2rem;
+background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
 }
 
 .auth-card {
-    background: var(--cor-fundo-card);
-    padding: 2.5rem;
-    border-radius: var(--raio-borda);
-    max-width: 480px;
-    width: 100%;
-    box-shadow: var(--sombra-md);
+background: var(--cor-fundo-card);
+padding: 2.5rem;
+border-radius: var(--raio-borda);
+max-width: 480px;
+width: 100%;
+box-shadow: var(--sombra-md);
 }
 
 .auth-card .logo {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+text-align: center;
+font-size: 2rem;
+margin-bottom: 2rem;
 }
 
 .auth-card h1 {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+text-align: center;
+font-size: 1.75rem;
+margin-bottom: 0.5rem;
 }
 
 .subtitulo {
-    text-align: center;
-    color: var(--cor-texto-secundario);
-    margin-bottom: 2rem;
+text-align: center;
+color: var(--cor-texto-secundario);
+margin-bottom: 2rem;
 }
 
 .campo-opcoes {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.875rem;
+display: flex;
+justify-content: space-between;
+font-size: 0.875rem;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+cursor: pointer;
 }
 
 .checkbox input {
-    width: 1rem;
-    height: 1rem;
+width: 1rem;
+height: 1rem;
 }
 
 .link {
-    color: var(--cor-primaria);
-    text-decoration: none;
-    font-weight: 500;
+color: var(--cor-primaria);
+text-decoration: none;
+font-weight: 500;
 }
 
 .link:hover {
-    text-decoration: underline;
+text-decoration: underline;
 }
 
 .w-100 {
-    width: 100%;
+width: 100%;
 }
 
-/* Responsividade Geral */
+/* Responsividade */
 @media (max-width: 1024px) {
-    .barra-lateral {
-        /* Potencial regra geral para ocultar .barra-lateral em outras páginas.
-           Para a dashboard, esta regra é sobrescrita pelos estilos específicos abaixo. */
-        /* display: none; */
-    }
+.principal .container {
+grid-template-columns: 1fr;
+}
+
+.barra-lateral {
+display: none;
+}
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 6rem 0 3rem;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .sobre-grid,
-    .recursos-grid {
-        grid-template-columns: 1fr;
-    }
-    .rodape-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .cabecalho-container {
-        padding: 0 1rem;
-    }
-    .menu {
-        display: none;
-    }
-    .menu.ativo {
-        display: flex;
-        flex-direction: column;
-        background: var(--cor-fundo-card);
-        padding: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        box-shadow: var(--sombra-md);
-    }
-    .botao-menu {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-    .hamburger {
-        width: 24px;
-        height: 2px;
-        background: var(--cor-texto);
-        position: relative;
-        transition: 0.3s;
-    }
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 2px;
-        background: var(--cor-texto);
-        transition: 0.3s;
-    }
-    .hamburger::before {
-        top: -6px;
-    }
-    .hamburger::after {
-        bottom: -6px;
-    }
-    .botao-menu.ativo .hamburger {
-        background: transparent;
-    }
-    .botao-menu.ativo .hamburger::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-    .botao-menu.ativo .hamburger::after {
-        transform: rotate(-45deg);
-        bottom: 0;
-    }
-    .acoes { /* Esconde toda a área de ações (que agora contém o dropdown de perfil) em telas <= 768px */
-        display: none;
-    }
+.hero {
+padding: 6rem 0 3rem;
 }
 
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.sobre-grid,
+.recursos-grid {
+grid-template-columns: 1fr;
+}
+
+.rodape-content {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+
+.cabecalho-container {
+padding: 0 1rem;
+}
+
+.menu {
+display: none;
+}
+
+.menu.ativo {
+display: flex;
+flex-direction: column;
+background: var(--cor-fundo-card);
+padding: 1rem;
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+box-shadow: var(--sombra-md);
+}
+
+.botao-menu {
+display: block;
+background: none;
+border: none;
+cursor: pointer;
+padding: 0.5rem;
+}
+
+.hamburger {
+width: 24px;
+height: 2px;
+background: var(--cor-texto);
+position: relative;
+transition: 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+content: '';
+position: absolute;
+width: 24px;
+height: 2px;
+background: var(--cor-texto);
+transition: 0.3s;
+}
+
+.hamburger::before {
+top: -6px;
+}
+
+.hamburger::after {
+bottom: -6px;
+}
+
+.botao-menu.ativo .hamburger {
+background: transparent;
+}
+
+.botao-menu.ativo .hamburger::before {
+transform: rotate(45deg);
+top: 0;
+}
+
+.botao-menu.ativo .hamburger::after {
+transform: rotate(-45deg);
+bottom: 0;
+}
+
+.acoes {
+display: none;
+}
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
-    .hero-buttons {
-        flex-direction: column;
-    }
-    .auth-container {
-        padding: 1rem;
-    }
-    .auth-card {
-        padding: 1.5rem;
-    }
+.hero h1 {
+font-size: 2rem;
 }
 
-/* --- Estilos específicos para a página de Dashboard (logout.html) --- */
+.hero p {
+font-size: 1rem;
+}
 
+.hero-buttons {
+flex-direction: column;
+}
+
+.auth-container {
+padding: 1rem;
+}
+
+.auth-card {
+padding: 1.5rem;
+}
 .principal {
-    padding-top: 6rem;
+    padding-top: 5rem; /* Ajuste este valor se o seu cabeçalho tiver altura diferente de 4rem */
     padding-bottom: 2rem;
 }
 
+  /*Tela de login sucessido*/
+/* Layout do container da dashboard com feed e barra lateral */
 .principal .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem; 
 }
 
+/* Estilização das Abas e Filtros no Feed */
 .feed .abas,
 .feed .filtros {
     margin-bottom: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    flex-wrap: wrap; 
+    gap: 0.75rem; 
 }
 
 .feed .aba,
@@ -586,12 +571,12 @@ body {
 
 .feed .aba:hover,
 .feed .filtro:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; 
     border-color: #cccccc;
     box-shadow: var(--sombra-sm);
 }
 
-.feed .aba.ativo,
+.feed .aba.ativo, 
 .feed .filtro.ativo {
     background-color: var(--cor-primaria);
     color: white;
@@ -599,6 +584,7 @@ body {
     font-weight: 600;
 }
 
+/* Estilização base para os cards de post (a serem inseridos via JS) */
 .lista-posts .post-card {
     background-color: var(--cor-fundo-card);
     border: 1px solid var(--cor-borda);
@@ -607,56 +593,49 @@ body {
     margin-bottom: 1.5rem;
     box-shadow: var(--sombra-sm);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-    overflow: hidden;
 }
 
 .lista-posts .post-card:hover {
     box-shadow: var(--sombra-md);
-    transform: translateY(-3px);
+    transform: translateY(-3px); 
 }
 
-.lista-posts .post-card img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: calc(var(--raio-borda) / 2);
-    margin-bottom: 1rem;
-}
-
-.lista-posts .post-card h4 {
+.lista-posts .post-card h4 { 
     color: var(--cor-primaria);
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
 }
 
-.lista-posts .post-card p {
+.lista-posts .post-card p { 
     color: var(--cor-texto-secundario);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-.lista-posts .post-meta {
+.lista-posts .post-meta { 
     font-size: 0.85rem;
-    color: #adb5bd;
+    color: #adb5bd; 
 }
 
-.principal .barra-lateral .card-perfil,
-.principal .barra-lateral .card-tendencias {
+/* Estilização da Barra Lateral e seus Cards */
+.barra-lateral .card-perfil,
+.barra-lateral .card-tendencias {
     background-color: var(--cor-fundo-card);
     border-radius: var(--raio-borda);
     padding: 1.5rem;
     box-shadow: var(--sombra-sm);
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Espaço entre os cards na sidebar */
 }
 
-.principal .barra-lateral .card-perfil .perfil-info {
+/* Card de Perfil */
+.barra-lateral .card-perfil .perfil-info {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.principal .barra-lateral .card-perfil .avatar {
+.barra-lateral .card-perfil .avatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -666,19 +645,19 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.principal .barra-lateral .card-perfil .nome {
+.barra-lateral .card-perfil .nome {
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--cor-texto);
     margin-bottom: 0.25rem;
 }
 
-.principal .barra-lateral .card-perfil .cargo {
+.barra-lateral .card-perfil .cargo {
     font-size: 0.85rem;
     color: var(--cor-texto-secundario);
 }
 
-.principal .barra-lateral .card-perfil .estatisticas {
+.barra-lateral .card-perfil .estatisticas {
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -686,146 +665,89 @@ body {
     padding-top: 1rem;
 }
 
-.principal .barra-lateral .card-perfil .stat strong {
+.barra-lateral .card-perfil .stat strong {
     display: block;
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--cor-texto);
 }
 
-.principal .barra-lateral .card-perfil .stat span {
+.barra-lateral .card-perfil .stat span {
     font-size: 0.8rem;
     color: var(--cor-texto-secundario);
-    text-transform: uppercase;
+    text-transform: uppercase; 
 }
 
-.principal .barra-lateral .card-tendencias h3 {
+/* Card de Tendências */
+.barra-lateral .card-tendencias h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
     color: var(--cor-texto);
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda); 
 }
 
-.principal .barra-lateral .lista-tendencias {
+.barra-lateral .lista-tendencias {
     list-style: none;
     padding-left: 0;
 }
 
-.principal .barra-lateral .lista-tendencias li {
-    margin-bottom: 0.5rem;
+.barra-lateral .lista-tendencias li {
+    margin-bottom: 0.5rem; /* Espaçamento menor entre itens de tendência */
 }
 
-.principal .barra-lateral .tendencia {
+.barra-lateral .tendencia {
     display: block;
-    padding: 0.6rem 0.2rem;
+    padding: 0.6rem 0.2rem; 
     color: var(--cor-texto-secundario);
     text-decoration: none;
-    border-radius: calc(var(--raio-borda) / 2);
+    border-radius: calc(var(--raio-borda) / 2); 
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.principal .barra-lateral .tendencia:hover {
+.barra-lateral .tendencia:hover {
     color: var(--cor-primaria);
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; 
 }
 
-.principal .barra-lateral .tendencia .tag {
+.barra-lateral .tendencia .tag {
     font-weight: 500;
-    color: var(--cor-primaria);
+    color: var(--cor-primaria); 
     display: block;
     margin-bottom: 0.25rem;
     font-size: 0.95rem;
 }
 
-.principal .barra-lateral .tendencia .posts {
+.barra-lateral .tendencia .posts {
     font-size: 0.8rem;
-    color: #6c757d;
+    color: #6c757d; 
 }
 
-/* Estilos para Card de Configurações da Conta */
-.principal .barra-lateral .card-configuracoes-conta {
-    background-color: var(--cor-fundo-card);
-    border-radius: var(--raio-borda);
-    padding: 1.5rem;
-    box-shadow: var(--sombra-sm);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.principal .barra-lateral .card-configuracoes-conta h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--cor-texto);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.principal .barra-lateral .secao-configuracao {
-    margin-bottom: 2rem;
-}
-
-.principal .barra-lateral .secao-configuracao:last-child {
-    margin-bottom: 0;
-}
-
-.principal .barra-lateral .secao-configuracao h4 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-}
-
-.principal .barra-lateral .card-configuracoes-conta .formulario .campo {
-    margin-bottom: 1rem;
-}
-
-.principal .barra-lateral .card-configuracoes-conta .formulario .campo label {
-    font-size: 0.85rem;
-    color: var(--cor-texto-secundario);
-}
-
-.principal .barra-lateral .card-configuracoes-conta .formulario .botao-primario {
-    margin-top: 0.5rem;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-}
-
-/* Media Queries Específicas da Dashboard */
+/* Ajustes para responsividade específica da dashboard se necessário */
 @media (max-width: 1024px) {
     .principal .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
-    .principal .barra-lateral {
-        display: block;
-        width: 100%;
-        margin-top: 2rem;
+
+    .barra-lateral {
+        margin-top: 2rem; 
     }
 }
 
 @media (max-width: 768px) {
-    .principal .feed .aba,
-    .principal .feed .filtro {
-        padding: 0.5rem 1rem;
+    .feed .aba,
+    .feed .filtro {
+        padding: 0.5rem 1rem; 
         font-size: 0.85rem;
     }
-    .principal .barra-lateral .card-perfil .perfil-info {
-        flex-direction: column;
+
+    .barra-lateral .card-perfil .perfil-info {
+        flex-direction: column; 
         text-align: center;
     }
-    .principal .barra-lateral .card-perfil .avatar {
+    .barra-lateral .card-perfil .avatar {
         margin-right: 0;
         margin-bottom: 1rem;
-    }
-    .principal .barra-lateral .card-configuracoes-conta {
-        padding: 1rem;
-    }
-    .principal .barra-lateral .card-configuracoes-conta h3 {
-        font-size: 1.15rem;
-    }
-    .principal .barra-lateral .secao-configuracao h4 {
-        font-size: 1rem;
     }
 }
