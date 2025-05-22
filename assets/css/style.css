@@ -415,125 +415,6 @@ body {
 
 /* Responsividade Geral (antes dos estilos específicos da tela logout) */
 
-@media (max-width: 1024px) {
-    .barra-lateral {
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 6rem 0 3rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .sobre-grid,
-    .recursos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .rodape-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .cabecalho-container {
-        padding: 0 1rem;
-    }
-
-    .menu {
-        display: none; 
-    }
-
-    .menu.ativo { /* Estilo para o menu hamburger quando ativo */
-        display: flex;
-        flex-direction: column;
-        background: var(--cor-fundo-card);
-        padding: 1rem;
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        right: 0;
-        box-shadow: var(--sombra-md);
-    }
-
-    .botao-menu { /* Botão Hamburger */
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    .hamburger {
-        width: 24px;
-        height: 2px;
-        background: var(--cor-texto);
-        position: relative;
-        transition: 0.3s;
-    }
-
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 2px;
-        background: var(--cor-texto);
-        transition: 0.3s;
-    }
-
-    .hamburger::before {
-        top: -6px;
-    }
-
-    .hamburger::after {
-        bottom: -6px;
-    }
-
-    .botao-menu.ativo .hamburger { /* Estilo do X do hamburger */
-        background: transparent;
-    }
-
-    .botao-menu.ativo .hamburger::before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    .botao-menu.ativo .hamburger::after {
-        transform: rotate(-45deg);
-        bottom: 0;
-    }
-
-    .acoes { /* Ações do cabeçalho (Entrar/Cadastrar) escondidas em telas menores */
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .auth-container {
-        padding: 1rem;
-    }
-
-    .auth-card {
-        padding: 1.5rem;
-    }
-}
-
 .principal {
     padding-top: 6rem;
     padding-bottom: 2rem;
@@ -776,7 +657,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Media Queries Específicas da Dashboard */
+/* Media Queries Específicas da Logout */
 @media (max-width: 1024px) {
     .principal .container {
         grid-template-columns: 1fr;
